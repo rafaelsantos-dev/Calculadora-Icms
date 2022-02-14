@@ -4,7 +4,9 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -37,5 +39,10 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <RadioButton fx:id="rb12" layoutX="352.0" layoutY="49.0" mnemonicParsing="false" text="12%">
+         <toggleGroup>
+            <ToggleGroup fx:id="rbImposto" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb18" layoutX="403.0" layoutY="49.0" mnemonicParsing="false" selected="true" text="18%" toggleGroup="$rbImposto" />
    </children>
 </AnchorPane>

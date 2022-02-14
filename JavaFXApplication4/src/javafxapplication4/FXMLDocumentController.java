@@ -42,8 +42,8 @@ public class FXMLDocumentController implements Initializable {
         txtIcms.setText("");
         txtMva.setText("");
         txtResultado.setText("");
-    }
-    
+    } 
+
     @FXML
     private TextField txtValor;
     @FXML
@@ -55,7 +55,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private CheckBox cbMva;
     @FXML
-    private ChoiceBox cbImposto;
+    private ChoiceBox<String> cbImposto;
     @FXML
     private Button btnCalcular;
     @FXML
