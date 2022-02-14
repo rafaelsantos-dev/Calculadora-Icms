@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="176.0" prefWidth="475.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="javafxapplication4.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="176.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.FXMLDocumentController">
    <children>
       <Label fx:id="lblTitulo" layoutX="50.0" layoutY="14.0" text="Calculadora de Substituição Tributária - ATC" textFill="RED">
          <font>
@@ -27,12 +27,12 @@
       <Label fx:id="lblIcms" layoutX="149.0" layoutY="49.0" text="Valor ICMS" />
       <TextField fx:id="txtResultado" layoutX="200.0" layoutY="119.0" prefHeight="25.0" prefWidth="75.0" />
       <Label fx:id="lblResultado" layoutX="122.0" layoutY="123.0" text="Resultado: R$" />
-      <Button fx:id="btnCalcular" layoutX="38.0" layoutY="117.0" mnemonicParsing="false" onAction="#clicouBotao" text="Calcular">
+      <Button fx:id="btnCalcular" defaultButton="true" layoutX="38.0" layoutY="117.0" mnemonicParsing="false" onAction="#clicouBotao" text="Calcular">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnLimpar" layoutX="291.0" layoutY="117.0" mnemonicParsing="false" text="Limpar">
+      <Button fx:id="btnLimpar" cancelButton="true" layoutX="291.0" layoutY="117.0" mnemonicParsing="false" text="Limpar">
          <font>
             <Font size="14.0" />
          </font>
