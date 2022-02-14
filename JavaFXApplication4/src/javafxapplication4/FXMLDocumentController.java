@@ -21,23 +21,46 @@ import javafx.scene.control.TextField;
  */
 public class FXMLDocumentController implements Initializable {
     
-    Double valornf, valoricms, mva, imposto, result;
-
     @FXML
-    private TextField txtValor;
-    private TextField txtIcms;
-    private TextField txtMva;
-    private TextField txtResultado;
-    private CheckBox cbMva;
-    private ChoiceBox cbImposto;
-    private Button btnCalcular;
-    private Button btnLimpar;
+    Double valornf, valoricms, mva, imposto, resultado;
     
     @FXML
-    private void clicouBotao(ActionEvent event) {
-        txtResultado.setText(String.valueOf(result));
+    private void btnCalcularClicado(ActionEvent event) {
+        valornf = Double.parseDouble(txtValor.getText());
+        valoricms = Double.parseDouble(txtIcms.getText());
+        mva = Double.parseDouble(txtMva.getText());
+        mva = mva / 100;
+        //imposto = Double.parseDouble(imposto_nf.getText());
+        //imposto = imposto / 100;
+        resultado = (valornf + valornf * mva) - valoricms;
+        //result = (valornf + valornf * mva) * imposto - valoricms;
+        txtResultado.setText(String.valueOf(resultado));
+    }
+    @FXML
+    private void btnLimparClicado(ActionEvent event) {
+        txtValor.setText("");
+        txtIcms.setText("");
+        txtMva.setText("");
+        txtResultado.setText("");
     }
     
+    @FXML
+    private TextField txtValor;
+    @FXML
+    private TextField txtIcms;
+    @FXML
+    private TextField txtMva;
+    @FXML
+    private TextField txtResultado;
+    @FXML
+    private CheckBox cbMva;
+    @FXML
+    private ChoiceBox cbImposto;
+    @FXML
+    private Button btnCalcular;
+    @FXML
+    private Button btnLimpar;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
